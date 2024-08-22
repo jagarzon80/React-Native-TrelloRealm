@@ -18,7 +18,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.jauser4592.TrelloRealm"
     },
     "web": {
       "favicon": "./assets/favicon.png"
