@@ -1,12 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import TaskListItem from "./src/components/TaskListItem";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>¡Hola Juli!</Text>
+    <SafeAreaView style={styles.container}>
+      <TaskListItem />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -14,7 +16,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    padding: 10,
   },
 });
