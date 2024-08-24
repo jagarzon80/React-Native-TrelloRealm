@@ -11,9 +11,9 @@ import TaskListItem from "./TaskListItem";
 
 export default function TaskList() {
   const [tasks, setTasks] = useState([
-    { description: "First task" },
-    { description: "Second task" },
-    { description: "Third task" },
+    { id: "123", description: "First task" },
+    { id: "456", description: "Second task" },
+    { id: "789", description: "Third task" },
   ]);
 
   const [newTask, setNewTask] = useState("");

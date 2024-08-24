@@ -4,7 +4,7 @@ import { Pressable, StyleSheet, Text } from "react-native";
 
 export default function TaskListItem({ task }) {
   return (
-    <Link href={"/details"} asChild>
+    <Link href={`/${task.id}`} asChild>
       <Pressable style={styles.container}>
         <Text style={styles.text}>{task.description}</Text>
         <AntDesign name="close" size={16} color="gray" />

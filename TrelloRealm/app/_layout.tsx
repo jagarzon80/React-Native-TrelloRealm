@@ -1,21 +1,12 @@
-import { Slot } from "expo-router";
+import { DarkTheme, ThemeProvider } from "@react-navigation/native";
+import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function RootLayout() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Slot />
+    <ThemeProvider value={DarkTheme}>
+      <Stack screenOptions={{}} />
       <StatusBar style="light" />
-    </SafeAreaView>
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    padding: 10,
-  },
-});
