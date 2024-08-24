@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import TaskList from "./src/components/TaskList";
+import TaskBoard from "./src/components/TaskBoard";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <TaskList />
-      <StatusBar style="auto" />
+      <TaskBoard />
+      <StatusBar style="light" />
     </SafeAreaView>
   );
 }
