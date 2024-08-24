@@ -1,12 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import TaskListItem from "./src/components/TaskListItem";
+import TaskList from "./src/components/TaskList";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <TaskListItem />
+      <TaskList />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
