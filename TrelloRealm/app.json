@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "TrelloRealm",
+    "scheme": "juli-trello",
     "slug": "TrelloRealm",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -28,6 +29,7 @@
       "eas": {
         "projectId": "31883fdf-fbd3-4170-9099-c416a83ade48"
       }
-    }
+    },
+    "plugins": ["expo-router"]
   }
 }
