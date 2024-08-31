@@ -1,4 +1,4 @@
-import { useQuery, useRealm } from "@realm/react";
+import { useQuery, useRealm, useUser } from "@realm/react";
 import { useState } from "react";
 import {
   Button,
@@ -15,11 +15,13 @@ export default function TaskList() {
   const realm = useRealm();
   const tasks = useQuery(Task);
 
+  const user = useUser();
+
   const [newTask, setNewTask] = useState("");
 
   const createTask = () => {
     realm.write(() => {
-      realm.create(Task, { description: newTask, user_id: "123" });
+      realm.create(Task, { description: newTask, user_id: user.id });
     });
 
     setNewTask("");
