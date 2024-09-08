@@ -1,7 +1,8 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { DarkTheme, ThemeProvider } from "@react-navigation/native";
-import { Stack } from "expo-router";
+import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
 import RealmCustomProvider from "../src/providers/Realm";
 
 export default function RootLayout() {
@@ -11,7 +12,18 @@ export default function RootLayout() {
         <Stack
           screenOptions={{
             headerRight: () => (
-              <FontAwesome name="user-circle-o" size={24} color="lightgray" />
+              <View style={styles.menu}>
+                <Link href="/login">
+                  <FontAwesome name="sign-in" size={24} color="lightgray" />
+                </Link>
+                <Link href="/profile">
+                  <FontAwesome
+                    name="user-circle-o"
+                    size={24}
+                    color="lightgray"
+                  />
+                </Link>
+              </View>
             ),
           }}
         ></Stack>
@@ -20,3 +32,10 @@ export default function RootLayout() {
     </ThemeProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  menu: {
+    flexDirection: "row",
+    gap: 10,
+  },
+});
